@@ -1,0 +1,29 @@
+{% extends 'nav.html'%}
+{% block body %}
+<div class="formulaire">
+    <form id="form" method ="POST" action="{{url_for('ajout_promo')}}">
+        <h2>Ajout_promo</h2>
+        <ul>
+            <label>Promo</label>
+            <input type="text" name="nom_promo" id="button" placeholder="Nom_référent"><br>
+            <br>
+
+            <label>Date début </label>
+            <input type="date" name="debut" id="button" placeholder="date_début"><br>
+            <br>
+            <label>_Date fin_ </label>
+            <input type="date" name="fin" id="button" placeholder="date_fin"><br>
+            <br>
+            <label>_Nom_réf_</label>
+            <select name="ref" id="">
+                {% for i in ref%}
+                <option value="{{i.0}}">{{i.1}}</option>
+                {% endfor %}
+            </select>
+        </ul>
+
+        <br>
+        <input type="submit" value="Ajouter" id="butt">
+    </form>
+</div>
+{% endblock %}

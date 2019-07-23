@@ -1,0 +1,82 @@
+{% extends 'nav.html' %}
+
+ 
+
+{% block body %}
+
+
+<div class="formulaire" id="test">
+  <style>
+    #test{
+      margin-left: 15px;
+    }
+  </style>
+    
+            <table class="table table-striped">
+                    <tr>
+                        <th>Id</th>
+                        <th>matricule</th>
+                        <th>Prenom</th>
+                        <th>Nom</th>
+                        <th>date_de_naissence</th>
+                        <th>numero_tel</th>
+                        <th>e_mail</th>
+                        <th>adresse</th>
+                        <th>nom_promo</th>
+                        <th>statu</th>
+                        <th>action</th>                        
+                    </tr>
+                    {% for row in annul%}
+                    <tr>
+                        <td>{{row.0}}</td>
+                        <td>{{row.1}}</td>
+                        <td>{{row.2}}</td>
+                        <td>{{row.3}}</td>
+                        <td>{{row.4}}</td>
+                        <td>{{row.5}}</td>
+                        <td>{{row.6}}</td>
+                        <td>{{row.7}}</td>
+                        <td>{{row.8}}</td>
+                        <td>{{row.9}}</td>
+                        
+                      
+
+
+    
+                        <td>
+                            <a href="/annulation/{{row.0}}" class="btn btn-success btn-xs">Annuler</a>
+                        </td>
+    
+    
+                    </tr>
+
+          {% endfor %}
+                </table>
+        
+    </div>
+    
+            
+       
+
+{% endblock body %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

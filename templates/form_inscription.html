@@ -1,0 +1,46 @@
+{% extends 'nav.html' %}
+{% block body %}
+
+<div class="formulaire">
+    <form id="form" method ="POST" action="{{ url_for('inscription') }}" >
+        <h2>Formulaire d'inscription</h2>
+        <label>Prénom</label>
+        <input type="text" name="prenom" id="button" placeholder="Entrer votre prénom" ><br>
+
+        <br>
+        <label>__Nom__</label>
+        <input type="text" name="nom" id="button" placeholder="Entrer votre nom"><br>
+        <br>
+        <label>Date de naiss</label>
+        <input type="date" name="datenais" id="button" placeholder="Entrer votre date de naissence"><br>
+        <br>
+        <label>numero</label>
+        <select><option>+221</option><option>+220</option><option>+33</option><option>+222</option><option>+223</option></select>
+        <input type="number" name="numero_tel" id="phone" placeholder="Entrer votre numero de tél"><br>
+        <br>
+        <label>Matricule</label>
+        <input type="text" name="matricule" id="button" placeholder="Entrer votre Matricule"><br>
+        <br>
+        <label>_email_</label>
+        <input type="email" name="email" id="button" placeholder="Entrer votre e-mail"><br>
+        <br>
+        <label>Adresse</label>
+        <input type="text" name="adresse" id="button" placeholder="Entrer votre Adresse"><br>
+        <br>
+        <!-- <label for="statut">statu</label>
+        <select name="statut" id="statut">
+            <option value="inscrit">inscrit</option>
+        </select>   
+        <br> -->
+        <label>Nom_promo</label>
+        <select name="promo" id="">
+            {% for i in promo %}
+            <option value="{{i.0}}">{{i.1}}</option>
+            {% endfor %}
+
+        </select>
+        <input type="submit" value="Envoyer" id="butt">
+    </form>
+</div>
+
+{% endblock body %}

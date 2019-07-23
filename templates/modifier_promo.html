@@ -1,0 +1,100 @@
+{% extends 'nav.html' %}
+{% block body %}
+
+
+<div class="formulaire">
+    <style>
+        #test{
+            margin-top: -50%;
+        }
+    </style>
+    
+            <table class="table table-striped">
+                
+                    <tr>
+                        <th>Id</th>
+                        <th>nom_promo</th>
+                        <th>date_debut</th>
+                        <th>date_fin</th>
+                        <th>nom_ref</th>
+                    </tr>
+                    {% for row in pro%}
+                    <tr>
+                        <td>{{row.0}}</td>
+                        <td>{{row.1}}</td>
+                        <td>{{row.2}}</td>
+                        <td>{{row.3}}</td>
+                        <td>{{row.4}}</td>
+    
+                        <td>
+                            <a href="/update_promo/{{row.0}}" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal{{row.0}}">Modifier</a>
+                        </td>
+    
+    
+                    </tr>
+                    <!-- Modal -->
+<!-- Trigger the modal with a button -->
+
+
+<!-- Modal -->
+<div id="myModal{{row.0}}" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modification de la promotion </h4>
+      </div>
+      <div class="modal-body">
+            <form action="{{ url_for('update_promo') }}" method="POST">
+
+                <div class="form-group">
+                    <label>:</label>
+                    <input type="hidden"  name="id" value="{{row.0}}">
+                    <input type="text" class="form-control" name="nom_promo" value="{{row.1}}">
+                </div>
+
+                <div class="form-group">
+                    <label>Date_debut:</label>
+                    <input type="date" class="form-control" name="date_debut" value="{{row.2}}">
+                </div>
+
+                <div class="form-group">
+                    <label>Date:</label>
+                    <input type="date" class="form-control" name="date_fin" value="{{row.3}}">
+                </div>
+
+                <div class="form-group">
+                    <label>Ref:</label>
+                    <select name="nom_ref" id="">
+                        {% for i in refe %}
+                        <option value="{{i.0}}">{{i.1}}</option>
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+    
+                <div class="form-group">
+                    <button class="btn btn-primary" type="sbumit">Mettre a jour</button>
+                </div>
+     
+            </form>
+     
+      </div>
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          {% endfor %}
+                </table>
+        
+    </div>
+    
+{% endblock body %}

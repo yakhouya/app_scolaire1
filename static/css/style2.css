@@ -1,0 +1,103 @@
+body{
+    background: aqua;
+}
+
+header{
+    background: aliceblue;
+    line-height: 55%;
+}
+
+
+.text{
+    margin-left: 27%;
+    height: 35%;
+}
+
+.text p{
+    margin-left: 15%;
+}
+
+.im1{
+    margin-top: -6%;
+    margin-left: 92%;
+}
+
+.im2{
+    margin-top: -8%;
+    margin-left: 0%;
+}
+
+
+
+footer{
+    background: #729EBF;
+    margin-top: 7px;
+}
+
+.menu{
+    width: 5%;
+    height: 25%;
+    margin-left: 15%;
+    margin-top: -9%;
+}
+
+.list_der{
+    color: aliceblue;
+}
+
+
+.formulaire{
+    text-align: center;
+    text-align: center;
+    margin: 100px 400px;
+}
+
+#form{
+    width: 100%;
+    background-color: rgb(145, 209, 189);
+    padding: 50px 0px;
+    margin-top: -41%;
+    opacity: 0.6;
+}
+#button{
+    width: 250px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: 0px;
+}
+
+#ph{
+    outline: 0px;
+    width: 0px;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+
+#phone{
+    outline: 0px;
+    width: 190px;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.dropdown button {
+    max-height: 15em;
+    padding:0;
+    margin:0;
+    text-align: center;
+    width: 180px;
+    margin-top: 0%;
+}
+
+li{
+    list-style: none;
+}
+.fmodal-content{
+    text-align: center;
+    text-align: center;
+    margin: 100px 400px;
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>yakhouya@</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href=" static/css/style2.css">
+ </head>
+<body>
+    <div>
+    <header>
+        <div class="en_tete">
+            <div class="text">
+                <ul>
+                    <h1>Bienvenue a la Sonatel Academy</h1>
+                    <p>Premiere école de codage gratuite au Senegal </p>
+                </ul>
+            </div>
+            <div>
+                <img class="im1" src="static/image/sonatel.gif" alt="" width="95" height="95">
+                <img class="im2" src="static/image/sonatel academy.png" alt="" width="110" height="105">
+            </div>
+        </div>
+    </header>
+    <div class="list_der">
+        <div class="dropdown">
+               <li><a href="/nav"><button type="button"  data-toggle="dropdown">Aceuil</button></a></li> 
+            </div>
+        <div class="dropdown">
+            <button type="button" class="btn-success dropdown-toggle" data-toggle="dropdown">Scolarité</button>
+                <ul class="dropdown-menu">
+                    <li><a href="/inscription"><button class="dropdown-item" type="button">Inscription</button></a></li>
+                    <li><a href="/modif_apprenant"><button class="dropdown-item" type="button">Modification</button></a></li>
+                    <li><a href="/annuler"><button class="dropdown-item" type="button">Annulation</button></a></li>
+                    <li><a href="/suspendre"><button class="dropdown-item" type="button">Suspendre</button></a></li>
+                </ul>
+        </div>
+        <div class="dropdown">
+            <button type="button" class="btn-success dropdown-toggle" data-toggle="dropdown">Référentiel</button>
+            <ul class="dropdown-menu">
+                <li><a href="/nouveau_ref"><button class="dropdown-item" type="button">Nouveau</button></a></li>
+                <li><a href="/modif_ref"><button class="dropdown-item" type="button">Modification</button></a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+        <button type="button" class="btn-success dropdown-toggle" data-toggle="dropdown">Promo</button>
+            <ul class="dropdown-menu">
+                <li><a href="/ajout_promo"><button class="dropdown-item" type="button">Nouveau</button></a></li>
+                <li><a href="/modif_promo"><button class="dropdown-item" type="button">Modifier</button></a></li>
+                <li><a href="lister_pormo.html"><button class="dropdown-item" type="button">Lister</button></a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <!-- <section>
+        <div class="menu">
+            <img src="static/image/sonatel.jpg" width="1110" height="470" alt="">
+
+        </div>
+    </section> -->
+    {% block body %}{% endblock %}
+    <footer>
+        <div id="footer">
+            <h1>Copyright -@yakhouya  Sonatel_Academy</h1>
+            <p1></p1>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- pour la touche d'aceuil class="btn-success dropdown-toggle" -->
